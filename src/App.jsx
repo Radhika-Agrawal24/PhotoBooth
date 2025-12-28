@@ -1,4 +1,4 @@
-import Booth from "./booth";
+import Booth from "./Booth";
 
 function App() {
   return <Booth />;
