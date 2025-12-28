@@ -1,0 +1,14 @@
+/* Reset + global font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: none;  /* remove solid bg if using Home bg */
+  color: #222;
+}

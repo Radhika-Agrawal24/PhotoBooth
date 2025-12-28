@@ -1,0 +1,235 @@
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* MAIN FLEX CONTAINER */
+.strip-main-container {
+  display: flex;
+  justify-content: center;  /* centers horizontally */
+  align-items: center;      /* centers vertically */
+  gap: 30px;                /* space between strip and controls */
+  min-height: 100vh;
+  padding: 20px;
+  background-color: pink; /* optional background */
+}
+
+/* STRIP WRAPPER */
+.strip-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* STRIP */
+.strip {
+  width: 220px;              /* narrow strip */
+  padding: 15px;
+  padding-bottom: 60px;
+  border: 3px solid black;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  overflow-y: auto;
+  position: relative;
+  background-color: white;
+}
+
+/* PHOTOS IN STRIP */
+.strip-photo {
+  width: 100%;
+  margin-bottom: 6px;
+  border-radius: 4px;
+}
+
+/* DRAGGABLE TEXT */
+.strip-text {
+  position: absolute;
+  cursor: grab;
+  user-select: none;
+  max-width: 90%;
+  word-break: break-word;
+  
+}
+
+/* ACTION BUTTONS BELOW STRIP */
+.actions {
+  display: flex;
+  gap: 10px;
+
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  background: #8f4e8c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* RETAKE BUTTON */
+.retake-btn {
+  padding: 8px 12px;
+  background: #7a0b48;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+/* CONTROLS BOX - Clean & Minimal */
+.controls {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #f5aee3;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* SECTION HEADERS */
+.controls h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  border-bottom: 1px solid #520127;
+  padding-bottom: 4px;
+ 
+}
+
+/* BACKGROUND OPTIONS */
+.background-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.background-options button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.background-options button.active {
+  box-shadow: 0 0 0 2px #e404b3 inset;
+}
+
+.background-options button:hover {
+  transform: scale(1.05);
+}
+
+.background-options img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* UPLOAD BUTTON */
+.upload-button {
+    display: flex;   
+  padding: 6px 12px;
+  background-color: #d243e6;
+  color: white;
+  font-size: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  
+  transition: background 0.2s ease;
+}
+
+.upload-button:hover {
+  background-color: #0056b3;
+}
+
+/* TEXT CONTROLS */
+.text-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  
+}
+
+
+.text-controls input[type="text"] {
+  width: 95%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #7e1478;
+  font-size: 13px;
+  outline: none;
+  transition: border 0.2s ease;
+  background-color: #e69dc1;
+}
+
+.text-controls input[type="text"]:focus {
+  border-color: #bb23a2;
+}
+
+/* Dropdown & Buttons */
+/* FONT SELECT DROPDOWN - make slightly narrower */
+.text-controls select {
+  width: 70%; /* adjust as needed */
+  padding: 6px 8px;
+  border-radius: 8px;
+  border: 1px solid #7e1478;
+  background-color: #e69dc1;
+  font-size: 13px;
+}
+
+/* COLOR PICKER - small square, on the right of font select */
+.text-controls .color-picker-wrapper {
+  display: inline-block;
+  vertical-align: middle;
+  
+  margin-left: 10px;
+  
+}
+
+.text-controls input[type="color"] {
+  width: 30px;  /* small square */
+  height: 30px;
+  padding-top: 4px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  
+}
+
+/* FONT SIZE SLIDER - pink dragger */
+.text-controls input[type="range"] {
+  width: 100%;
+  cursor: pointer;
+  
+  accent-color: #ff69b4; /* pink */
+}
+.text-controls button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid #f472b6;
+  background-color: #e69dc1;
+  color:black;
+  font-size: large;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+.text-controls button.active {
+  background-color: #ec4899;   /* pink */
+  color: #ffffff;
+  border-color: #ec4899;
+}
+

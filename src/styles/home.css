@@ -1,0 +1,44 @@
+.home {
+  position: relative;       /* needed for absolute bg positioning */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow: hidden;         /* prevent scrollbars */
+  z-index: 1;               /* ensure content is above bg */
+}
+
+.home h1 {
+  font-size: 3rem;
+   color: #df0a51; 
+  z-index: 1;               /* above bg */
+}
+
+.home button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+
+  background:#df0a51;   color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.home button:hover {
+  opacity: 0.85;
+}
+
+#bg {
+  position: fixed;          /* fixed relative to viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;        /* fill viewport without stretching */
+  z-index: -1; 
+    
+             /* behind all content */
+}
