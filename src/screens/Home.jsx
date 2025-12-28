@@ -1,4 +1,4 @@
-import "../styles/home.css"; // if it's in src/styles
+import "../styles/home.css"
 import React from "react";
 function Home({ onStart }) {
   return (
