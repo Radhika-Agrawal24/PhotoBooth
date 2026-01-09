@@ -285,7 +285,7 @@ function Camo({ addPhoto, count }) {
 
       <div className="slider-bar">
         <label>
-          Brightness
+          Brightness 
           <input
             ref={brightnessRef}
             type="range"

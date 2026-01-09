@@ -7,7 +7,7 @@ function Home({ onStart }) {
       <img id="bg" src="/Home.png" alt="Background" />
 
       {/* Foreground content */}
-      <h1>Photo Booth</h1>
+      <h1>PhotoBooth</h1>
       <button onClick={onStart}>Open Camera</button>
     </div>
   );
