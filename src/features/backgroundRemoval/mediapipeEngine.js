@@ -34,9 +34,7 @@ export async function segmentPerson(videoEl) {
   });
 }
 
-/* ===============================
-   🎨 RENDER HELPERS
-   =============================== */
+
 
 export function renderWithBackground({
   results,
@@ -57,12 +55,12 @@ export function renderWithBackground({
     ctx.drawImage(bgImg, 0, 0, canvas.width, canvas.height);
   }
 
-  // 2️⃣ Apply mask
+  
   ctx.save();
   ctx.globalCompositeOperation = "destination-atop";
   ctx.drawImage(results.segmentationMask, 0, 0, canvas.width, canvas.height);
   ctx.restore();
 
-  // 3️⃣ Draw person
+
   ctx.drawImage(results.image, 0, 0, canvas.width, canvas.height);
 }

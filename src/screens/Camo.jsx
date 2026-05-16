@@ -241,7 +241,7 @@ function Camo({ addPhoto, count }) {
         ))}
       </div>
 
-    {/* Remove Background toggle */}
+    
 <label className="bg-toggle">
   <input
     type="checkbox"
@@ -269,99 +269,102 @@ function Camo({ addPhoto, count }) {
 </button>
 
 
+      
       {bgVisible && removeBg && (
-        <label>
-          Background Opacity
-          <input
-            type="range"
-            min="0"
-            max="1"
-            step="0.01"
-            value={bgOpacity}
-            onChange={(e) => setBgOpacity(e.target.value)}
-          />
-        </label>
-      )}
+  <label>
+    Background Opacity
+    <input
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      value={bgOpacity}
+      onInput={(e) => setBgOpacity(Number(e.target.value))}
+    />
+  </label>
+)}
 
-      <div className="slider-bar">
-        <label>
-          Brightness 
-          <input
-            ref={brightnessRef}
-            type="range"
-            min="50"
-            max="150"
-            value={brightness}
-            onChange={(e) => {
-              setBrightness(e.target.value);
-              updateFill(e);
-            }}
-          />
-        </label>
+<div className="slider-bar">
+  <label>
+    Brightness
+    <input
+      ref={brightnessRef}
+      type="range"
+      min="50"
+      max="150"
+      value={brightness}
+      onInput={(e) => {
+        setBrightness(Number(e.target.value));
+        updateFill(e);
+      }}
+    />
+  </label>
 
-        <label>
-          Contrast
-          <input
-            ref={contrastRef}
-            type="range"
-            min="50"
-            max="150"
-            value={contrast}
-            onChange={(e) => {
-              setContrast(e.target.value);
-              updateFill(e);
-            }}
-          />
-        </label>
+  <label>
+    Contrast
+    <input
+      ref={contrastRef}
+      type="range"
+      min="50"
+      max="150"
+      value={contrast}
+      onInput={(e) => {
+        setContrast(Number(e.target.value));
+        updateFill(e);
+      }}
+    />
+  </label>
 
-        <label>
-          Blur
-          <input
-            ref={blurRef}
-            type="range"
-            min="0"
-            max="5"
-            value={blur}
-            onChange={(e) => {
-              setBlur(e.target.value);
-              updateFill(e);
-            }}
-          />
-        </label>
+  <label>
+    Blur
+    <input
+      ref={blurRef}
+      type="range"
+      min="0"
+      max="5"
+      step="0.1"
+      value={blur}
+      onInput={(e) => {
+        setBlur(Number(e.target.value));
+        updateFill(e);
+      }}
+    />
+  </label>
 
-        <label>
-          Hue
-          <input
-            ref={hueRef}
-            type="range"
-            min="0"
-            max="360"
-            value={hue}
-            onChange={(e) => {
-              setHue(e.target.value);
-              updateFill(e);
-            }}
-          />
-        </label>
+  <label>
+    Hue
+    <input
+      ref={hueRef}
+      type="range"
+      min="0"
+      max="360"
+      value={hue}
+      onInput={(e) => {
+        setHue(Number(e.target.value));
+        updateFill(e);
+      }}
+    />
+  </label>
 
-        <label>
-          Saturate
-          <input
-            ref={saturateRef}
-            type="range"
-            min="50"
-            max="200"
-            value={saturate}
-            onChange={(e) => {
-              setSaturate(e.target.value);
-              updateFill(e);
-            }}
-          />
-        </label>
+  <label>
+    Saturate
+    <input
+      ref={saturateRef}
+      type="range"
+      min="50"
+      max="200"
+      value={saturate}
+      onInput={(e) => {
+        setSaturate(Number(e.target.value));
+        updateFill(e);
+      }}
+    />
+  </label>
       </div>
+      
 
-    </div>
-  );
+   </div>
+);
 }
 
 export default Camo;
