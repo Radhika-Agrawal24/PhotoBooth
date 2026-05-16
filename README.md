@@ -1,18 +1,78 @@
-# React + Vite
+AI Photobooth
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive AI-powered photobooth web application built using React, MediaPipe, and the HTML5 Canvas API.
 
-Currently, two official plugins are available:
+The application allows users to capture photos through their webcam, apply real-time filters, remove backgrounds using AI segmentation, customize photo strips, and download the final output as a PNG image.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+Real-time webcam capture
+AI-powered background removal
+Multiple live filters
+Brightness, contrast, blur, hue, and saturation controls
+Custom background selection
+Background opacity adjustment
+Capture up to 3 photos
+Automatic photo strip generation
+Custom text and caption support
+Draggable text positioning
+Font styling and color customization
+Upload custom strip backgrounds
+Download final photo strip as PNG
+Tech Stack
+React
+JavaScript
+MediaPipe Selfie Segmentation
+HTML5 Canvas API
+html2canvas
+CSS
+How It Works
+Webcam Integration
 
-## React Compiler
+The application accesses the user’s webcam using the browser Media Devices API.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+Real-Time Filters
 
-Note: This will impact Vite dev & build performances.
+Users can apply live filters and manually adjust visual properties like brightness, contrast, blur, hue, and saturation.
 
-## Expanding the ESLint configuration
+AI Background Removal
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+MediaPipe Selfie Segmentation is used to separate the person from the background in real time.
+
+Canvas Rendering
+
+The Canvas API is used for:
+
+applying filters
+rendering segmentation masks
+compositing backgrounds
+generating final images
+Final Strip Generation
+
+Captured photos are combined into a customizable photo strip where users can:
+
+add text
+drag text position
+change font styles
+upload backgrounds
+export the final design
+Learning Outcomes
+
+Through this project, I learned:
+
+React Hooks
+Real-time rendering workflows
+Browser media APIs
+Canvas compositing
+AI segmentation integration
+State management
+Interactive UI development
+Modular project architecture
+Future Improvements
+Add stickers and frames
+Add GIF/video export
+Mobile responsiveness improvements
+Cloud image storage
+Social sharing support
+Author
+
+Radhika Agrawal
